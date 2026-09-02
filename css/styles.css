@@ -1,0 +1,641 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor-alojamiento {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(204, 204, 204, 0.1764705882);
+}
+.contenedor-alojamiento ul {
+  list-style: none;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+.contenedor-alojamiento ul li {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+.contenedor-alojamiento ul a {
+  margin: 15px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+.contenedor-alojamiento ul a:hover {
+  color: rgba(23, 77, 224, 0.6431372549);
+}
+.contenedor-alojamiento img {
+  width: 100px;
+  height: -10px;
+  margin: 10px;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.titulo {
+  background-color: rgba(204, 204, 204, 0.1764705882);
+  padding: 20px;
+  text-align: center;
+  font-size: xx-large;
+  color: rgba(23, 77, 224, 0.6431372549);
+  display: flex;
+  justify-content: center;
+}
+
+/* texto decorativo */
+/* Estilos para el texto de invitación */
+.texto-invitación {
+  max-width: 800px;
+  margin: 40px auto 30px;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3eaff 100%);
+  border-left: 5px solid #174de0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+}
+.texto-invitación::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(23, 77, 224, 0.1254901961), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.texto-invitación .titulo-invitación {
+  font-size: 2.2rem;
+  color: #174de0;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+.texto-invitación .titulo-invitación::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #174de0;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.texto-invitación .cuerpo-invitación {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  padding-left: 10px;
+}
+.texto-invitación .cuerpo-invitación span:first-letter {
+  font-size: 3rem;
+  color: #174de0;
+  float: left;
+  line-height: 0.8;
+  margin-right: 8px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .texto-invitación {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.8rem;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilos para el contenedor de imágenes */
+.contendor-imagnes1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contendor-imagnes1 .contenedor-imagenes {
+  width: 400px;
+  position: relative;
+  padding: 25px;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.contendor-imagnes1 .contenedor-imagenes img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.contendor-imagnes1 .contenedor-imagenes img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(23, 77, 224, 0.6431372549);
+  filter: brightness(0.6);
+  cursor: pointer;
+}
+.contendor-imagnes1 .contenedor-imagenes .texto-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 10;
+  width: 80%;
+}
+.contendor-imagnes1 .contenedor-imagenes .texto-hover a {
+  text-decoration: none;
+  color: white;
+}
+.contendor-imagnes1 .contenedor-imagenes:hover .texto-hover {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* 1. Ajustes del Contenedor de Alojamiento (Menú) */
+  .contenedor-alojamiento {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedor-alojamiento img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .contenedor-alojamiento ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .contenedor-alojamiento ul li {
+    justify-content: center;
+    width: 100%;
+  }
+  .contenedor-alojamiento ul a {
+    display: block;
+    padding: 10px 0;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+  }
+  /* 2. Ajustes del Título Principal */
+  .titulo {
+    font-size: 1.8rem;
+    padding: 15px;
+    word-wrap: break-word;
+  }
+  /* 3. Ajustes del Texto de Invitación */
+  .texto-invitación {
+    margin: 20px 15px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .texto-invitación .cuerpo-invitación span:first-letter {
+    font-size: 2.5rem;
+    margin-right: 5px;
+  }
+  /* 4. Ajustes de la Galería de Imágenes (Lo más importante) */
+  .contendor-imagnes1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contendor-imagnes1 .contenedor-imagenes {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    padding: 10px;
+    border: none;
+  }
+  .contendor-imagnes1 .contenedor-imagenes img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+  }
+  .contendor-imagnes1 .contenedor-imagenes .texto-hover {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.4rem;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 0.95rem;
+  }
+  .contenedor-imagenes img {
+    height: 200px;
+  }
+}
+body {
+  font-family: "lora", sans-serif;
+}
+
+.encabezado {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: rgba(63, 27, 224, 0.637);
+  font-style: normal;
+  font-size: medium;
+  background-color: rgba(204, 204, 204, 0.4784313725);
+}
+
+.contenedor-logo {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.primer-buscador {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.primer-buscador ul {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  list-style: none;
+  padding: 20px;
+  border-radius: 25px;
+}
+.primer-buscador li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 25px;
+}
+.primer-buscador a {
+  color: rgba(204, 204, 204, 0.6431372549);
+  list-style: none;
+  text-decoration: none;
+  font-size: large;
+}
+.primer-buscador a:hover {
+  color: white;
+}
+
+.cartas-general {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+.cartas-general .carta-turismo {
+  box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.cartas-general .carta-turismo img {
+  width: 300px;
+  height: 200px;
+}
+.cartas-general .carta-turismo h4 {
+  padding: 10px;
+  margin: 5px;
+}
+.cartas-general .carta-turismo button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(110, 109, 109, 0.24);
+  justify-content: end;
+  align-items: end;
+  cursor: pointer;
+}
+.cartas-general .carta-turismo button:hover {
+  background-color: rgba(57, 18, 233, 0.637);
+  color: white;
+}
+.cartas-general .carta-turismo:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(57, 18, 233, 0.637);
+  cursor: pointer;
+}
+.cartas-general .carta-promociones {
+  box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.cartas-general .carta-promociones img {
+  width: 300px;
+  height: 200px;
+}
+.cartas-general .carta-promociones h4 {
+  padding: 10px;
+  margin: 5px;
+}
+.cartas-general .carta-promociones button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(110, 109, 109, 0.24);
+  justify-content: end;
+  cursor: pointer;
+}
+.cartas-general .carta-promociones button:hover {
+  background-color: rgba(57, 18, 233, 0.637);
+  color: white;
+}
+.cartas-general .carta-promociones:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(57, 18, 233, 0.637);
+  cursor: pointer;
+}
+.cartas-general .carta-europa {
+  box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.cartas-general .carta-europa img {
+  width: 300px;
+  height: 200px;
+}
+.cartas-general .carta-europa h4 {
+  padding: 10px;
+  margin: 5px;
+}
+.cartas-general .carta-europa button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(110, 109, 109, 0.24);
+  justify-content: end;
+  cursor: pointer;
+}
+.cartas-general .carta-europa button:hover {
+  background-color: rgba(57, 18, 233, 0.637);
+  color: white;
+}
+.cartas-general .carta-europa:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(57, 18, 233, 0.637);
+  cursor: pointer;
+}
+.cartas-general .carta-nosotros {
+  box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.cartas-general .carta-nosotros img {
+  width: 300px;
+  height: 200px;
+}
+.cartas-general .carta-nosotros h4 {
+  padding: 10px;
+  margin: 5px;
+}
+.cartas-general .carta-nosotros button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(110, 109, 109, 0.24);
+  justify-content: end;
+  cursor: pointer;
+}
+.cartas-general .carta-nosotros button:hover {
+  background-color: rgba(57, 18, 233, 0.637);
+  color: white;
+}
+.cartas-general .carta-nosotros:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(57, 18, 233, 0.637);
+  cursor: pointer;
+}
+
+.boton-agregarfoto {
+  width: 30%;
+  height: auto;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.boton-agregarfoto button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: rgba(110, 109, 109, 0.24);
+  cursor: pointer;
+}
+.boton-agregarfoto button:hover {
+  background-color: rgba(57, 18, 233, 0.226);
+  color: rgb(0, 0, 0);
+}
+.boton-agregarfoto img {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  /* 1. Ajustes del Encabezado y Menú Flotante */
+  .encabezado {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .contenedor-logo {
+    width: 100%;
+  }
+  .logo {
+    height: 250px;
+    width: 100%;
+  }
+  .primer-buscador {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-top: -20px;
+  }
+  .primer-buscador ul {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    gap: 10px;
+  }
+  .primer-buscador li {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .primer-buscador li:last-child {
+    border-bottom: none;
+  }
+  .primer-buscador a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.1rem;
+  }
+  .primer-buscador a:hover {
+    color: #fff;
+    transform: scale(1.05);
+  }
+  /* 2. Ajustes de las Tarjetas (Cartas) */
+  .cartas-general {
+    padding: 15px;
+    gap: 20px;
+  }
+  .cartas-general .carta-turismo,
+  .cartas-general .carta-promociones,
+  .cartas-general .carta-europa,
+  .cartas-general .carta-nosotros {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .cartas-general .carta-turismo img,
+  .cartas-general .carta-promociones img,
+  .cartas-general .carta-europa img,
+  .cartas-general .carta-nosotros img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .cartas-general .carta-turismo h4,
+  .cartas-general .carta-promociones h4,
+  .cartas-general .carta-europa h4,
+  .cartas-general .carta-nosotros h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  .cartas-general .carta-turismo button,
+  .cartas-general .carta-promociones button,
+  .cartas-general .carta-europa button,
+  .cartas-general .carta-nosotros button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  /* 3. Ajustes del Botón de Foto */
+  .boton-agregarfoto {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .boton-agregarfoto button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  .boton-agregarfoto img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    height: 180px;
+  }
+  .primer-buscador ul {
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .cartas-general .carta-turismo img,
+  .cartas-general .carta-promociones img,
+  .cartas-general .carta-europa img,
+  .cartas-general .carta-nosotros img {
+    height: 160px;
+  }
+  .cartas-general .carta-turismo h4,
+  .cartas-general .carta-promociones h4,
+  .cartas-general .carta-europa h4,
+  .cartas-general .carta-nosotros h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

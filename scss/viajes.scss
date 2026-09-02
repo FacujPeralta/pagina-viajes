@@ -1,0 +1,323 @@
+.contenedor-alojamiento{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #cccccc2d;
+    ul{
+        list-style: none;
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        li {
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            justify-content: end;
+        }
+            a{
+                margin: 15px;
+                list-style: none;
+                text-decoration: none;
+                color: black;
+                font-size: large;
+                &:hover{
+                    color: #174de0a4;
+                }
+        }
+    }
+    img{
+        width: 100px;
+        height: -10px;
+        margin: 10px;
+        object-fit: cover;
+        justify-content: center;
+    }
+}
+.titulo{
+    background-color: #cccccc2d;
+    padding: 20px;
+    text-align: center;
+    font-size: xx-large;
+    color: #174de0a4;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/* texto decorativo */
+/* Estilos para el texto de invitación */
+.texto-invitación {
+  max-width: 800px;
+  margin: 40px auto 30px; // Centrado y con margen superior/inferior
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3eaff 100%); // Degradado suave
+  border-left: 5px solid #174de0; // Acento de color a la izquierda
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); // Sombra suave
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out; // Animación de entrada
+
+  // Efecto de "brillo" o decoración de fondo
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #174de020, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .titulo-invitación {
+    font-size: 2.2rem;
+    color: #174de0;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+    
+    // Efecto de subrayado animado (opcional)
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #174de0;
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+  }
+
+  .cuerpo-invitación {
+    font-size: 1.1rem;
+    color: #4a5568; // Gris oscuro para buen contraste
+    line-height: 1.8;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    
+    // Primera letra capital (opcional, para estilo editorial)
+    span:first-letter {
+      font-size: 3rem;
+      color: #174de0;
+      float: left;
+      line-height: 0.8;
+      margin-right: 8px;
+      font-weight: bold;
+    }
+  }
+
+  // Responsive: Ajuste para móviles
+  @media (max-width: 600px) {
+    padding: 20px;
+    margin: 20px auto;
+    
+    .titulo-invitación {
+      font-size: 1.8rem;
+    }
+    
+    .cuerpo-invitación {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Animación de entrada (definición)
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Estilos para el contenedor de imágenes */
+  .contendor-imagnes1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .contenedor-imagenes {
+    width: 400px; // Ajusta según tus necesidades
+    position: relative; // IMPORTANTE: Para que el texto se posicione relativo a este div
+    padding: 25px;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden; // Opcional: si quieres que nada se salga del borde
+
+    img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        box-shadow: inset 0 0 10px #174de0a4;
+        filter: brightness(0.6); // El oscurecimiento que ya teníamos
+        cursor: pointer;
+      }
+    }
+
+    // Estilos del texto oculto
+    .texto-hover {
+      position: absolute;
+      top: 50%; // Centrado vertical
+      left: 50%; // Centrado horizontal
+      transform: translate(-50%, -50%) translateY(20px); // Un poco más abajo inicialmente
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6); // Fondo semitransparente para legibilidad
+      padding: 10px 20px;
+      border-radius: 5px;
+      opacity: 0; // Invisible al inicio
+      transition: all 0.4s ease; // Transición suave
+      z-index: 10; // Asegura que esté encima de la imagen
+      width: 80%; // Ancho relativo
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    // Al hacer hover en el contenedor (no solo en la imagen), mostramos el texto
+    &:hover .texto-hover {
+        opacity: 1; // Visible
+        transform: translate(-50%, -50%) translateY(0); // Vuelve a su posición original (sube un poco)
+        cursor: pointer;
+    }
+  }
+}
+
+// --- RESPONSIVE DESIGN (MÓVILES Y TABLETS) ---
+@media (max-width: 768px) {
+  
+  /* 1. Ajustes del Contenedor de Alojamiento (Menú) */
+  .contenedor-alojamiento {
+    flex-direction: column; // Apila imagen y menú verticalmente
+    align-items: center;
+    text-align: center;
+    
+    img {
+      width: 80px; // Logo más pequeño
+      height: auto; // Mantiene proporción (evita el -10px que es inválido)
+      margin-bottom: 20px;
+    }
+
+    ul {
+      flex-direction: column; // Menú vertical
+      align-items: center;
+      gap: 10px; // Espacio entre items
+
+      li {
+        justify-content: center; // Centrar items
+        width: 100%;
+      }
+
+      a {
+        display: block; // Ocupa todo el ancho para facilitar el toque
+        padding: 10px 0;
+        margin: 5px 0;
+        font-size: 1.1rem; // Texto un poco más grande para tocar fácil
+        border-bottom: 1px solid #ddd; // Separador sutil
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+
+  /* 2. Ajustes del Título Principal */
+  .titulo {
+    font-size: 1.8rem; // Título más pequeño
+    padding: 15px;
+    word-wrap: break-word; // Evita que palabras largas rompan el diseño
+  }
+
+  /* 3. Ajustes del Texto de Invitación */
+  .texto-invitación {
+    margin: 20px 15px; // Márgenes laterales reducidos
+    padding: 20px;
+    border-radius: 8px;
+    
+    .titulo-invitación {
+      font-size: 1.6rem; // Título interno más pequeño
+      text-align: center; // Centrado en móvil
+    }
+
+    .cuerpo-invitación {
+      font-size: 1rem; // Texto más legible
+      text-align: justify; // Justificado para mejor lectura
+      line-height: 1.6;
+      
+      // Ajuste de la letra capital para móviles
+      span:first-letter {
+        font-size: 2.5rem;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  /* 4. Ajustes de la Galería de Imágenes (Lo más importante) */
+  .contendor-imagnes1 {
+    flex-direction: column; // Asegura columna
+    align-items: center;
+    gap: 20px;
+
+    .contenedor-imagenes {
+      width: 100%; // Ocupa todo el ancho disponible
+      max-width: 400px; // No supera el ancho de la pantalla
+      margin: 0; // Quita márgenes laterales
+      padding: 10px;
+      border: none; // Quita borde en móvil si molesta, o déjalo si gusta
+
+      img {
+        width: 100%; // Se adapta al ancho del contenedor
+        height: 250px; // Altura fija pero más pequeña
+        border-radius: 8px;
+      }
+
+      .texto-hover {
+        font-size: 1.2rem; // Texto sobre imagen más pequeño
+        padding: 8px 12px;
+        
+        // En móvil, a veces es mejor que el texto se vea siempre o al tocar
+        // Pero mantendremos el hover (touch) para consistencia
+      }
+    }
+  }
+}
+
+// --- MUY MÓVILES (Pantallas muy pequeñas, < 480px) ---
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  .texto-invitación .titulo-invitación {
+    font-size: 1.4rem;
+  }
+  
+  .texto-invitación .cuerpo-invitación {
+    font-size: 0.95rem;
+  }
+
+  .contenedor-imagenes img {
+    height: 200px; // Imágenes más pequeñas para ahorrar espacio vertical
+  }
+}

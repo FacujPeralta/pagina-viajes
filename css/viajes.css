@@ -1,0 +1,281 @@
+@charset "UTF-8";
+.contenedor-alojamiento {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(204, 204, 204, 0.1764705882);
+}
+.contenedor-alojamiento ul {
+  list-style: none;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+}
+.contenedor-alojamiento ul li {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+.contenedor-alojamiento ul a {
+  margin: 15px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+.contenedor-alojamiento ul a:hover {
+  color: rgba(23, 77, 224, 0.6431372549);
+}
+.contenedor-alojamiento img {
+  width: 100px;
+  height: -10px;
+  margin: 10px;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.titulo {
+  background-color: rgba(204, 204, 204, 0.1764705882);
+  padding: 20px;
+  text-align: center;
+  font-size: xx-large;
+  color: rgba(23, 77, 224, 0.6431372549);
+  display: flex;
+  justify-content: center;
+}
+
+/* texto decorativo */
+/* Estilos para el texto de invitación */
+.texto-invitación {
+  max-width: 800px;
+  margin: 40px auto 30px;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3eaff 100%);
+  border-left: 5px solid #174de0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+}
+.texto-invitación::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(23, 77, 224, 0.1254901961), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.texto-invitación .titulo-invitación {
+  font-size: 2.2rem;
+  color: #174de0;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+.texto-invitación .titulo-invitación::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #174de0;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.texto-invitación .cuerpo-invitación {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  padding-left: 10px;
+}
+.texto-invitación .cuerpo-invitación span:first-letter {
+  font-size: 3rem;
+  color: #174de0;
+  float: left;
+  line-height: 0.8;
+  margin-right: 8px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .texto-invitación {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.8rem;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilos para el contenedor de imágenes */
+.contendor-imagnes1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contendor-imagnes1 .contenedor-imagenes {
+  width: 400px;
+  position: relative;
+  padding: 25px;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.contendor-imagnes1 .contenedor-imagenes img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.contendor-imagnes1 .contenedor-imagenes img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(23, 77, 224, 0.6431372549);
+  filter: brightness(0.6);
+  cursor: pointer;
+}
+.contendor-imagnes1 .contenedor-imagenes .texto-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 10;
+  width: 80%;
+}
+.contendor-imagnes1 .contenedor-imagenes .texto-hover a {
+  text-decoration: none;
+  color: white;
+}
+.contendor-imagnes1 .contenedor-imagenes:hover .texto-hover {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* 1. Ajustes del Contenedor de Alojamiento (Menú) */
+  .contenedor-alojamiento {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contenedor-alojamiento img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .contenedor-alojamiento ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .contenedor-alojamiento ul li {
+    justify-content: center;
+    width: 100%;
+  }
+  .contenedor-alojamiento ul a {
+    display: block;
+    padding: 10px 0;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+  }
+  /* 2. Ajustes del Título Principal */
+  .titulo {
+    font-size: 1.8rem;
+    padding: 15px;
+    word-wrap: break-word;
+  }
+  /* 3. Ajustes del Texto de Invitación */
+  .texto-invitación {
+    margin: 20px 15px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .texto-invitación .cuerpo-invitación span:first-letter {
+    font-size: 2.5rem;
+    margin-right: 5px;
+  }
+  /* 4. Ajustes de la Galería de Imágenes (Lo más importante) */
+  .contendor-imagnes1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contendor-imagnes1 .contenedor-imagenes {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    padding: 10px;
+    border: none;
+  }
+  .contendor-imagnes1 .contenedor-imagenes img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+  }
+  .contendor-imagnes1 .contenedor-imagenes .texto-hover {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+}
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.4rem;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.4rem;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 0.95rem;
+  }
+  .contenedor-imagenes img {
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=viajes.css.map */

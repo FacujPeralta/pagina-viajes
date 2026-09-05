@@ -334,4 +334,46 @@
   .contenedor-imagenes img {
     height: 200px; // Imágenes más pequeñas para ahorrar espacio vertical
   }
+}@media (max-width: 480px) {
+  // 1. Títulos: Un poco más pequeños pero con peso visual
+  .titulo {
+    font-size: 1.25rem; // Bajamos de 1.4 a 1.25 para que no ocupe tanto
+    font-weight: 700;
+    line-height: 1.2; // Ajusta la altura de línea para que no se corte
+    margin-bottom: 15px; // Un poco más de aire debajo del título
+  }
+
+  // 2. Sección de invitación
+  .texto-invitación {
+    .titulo-invitación {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #333; // Asegúrate de que tenga buen contraste
+    }
+
+    .cuerpo-invitación {
+      font-size: 0.9rem; // Un poco más pequeño para lectura cómoda
+      line-height: 1.6; // Esto es CLAVE: aumenta el espacio entre líneas para que sea fácil de leer
+      margin-bottom: 20px;
+      opacity: 0.9; // Un toque de elegancia
+    }
+  }
+
+  // 3. Imágenes: Mejor proporción
+  .contenedor-imagenes {
+    img {
+      height: auto; // ¡Importante! Deja que la imagen mantenga su proporción original
+      max-height: 250px; // Limitamos la altura máxima si es necesario, pero 'auto' es mejor
+      width: 100%;
+      border-radius: 12px; // Un radio un poco más suave se ve más moderno
+      object-fit: cover; // Evita que se deforme
+    }
+    
+    // Si tienes botones dentro, ajústalos también para que no queden pegados
+    .button {
+      width: 100%; // Botón ancho completo en móvil es más fácil de tocar
+      padding: 12px;
+      margin-top: 10px;
+    }
+  }
 }

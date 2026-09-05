@@ -335,144 +335,46 @@ p{
 
 
 
-// --- RESPONSIVE DESIGN (MÓVILES Y TABLETS) ---
-@media (max-width: 768px) {
-  
-  /* 1. Ajustes del Encabezado y Menú Flotante */
-  .encabezado {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .contenedor-logo {
-    width: 100%;
-    // Quitamos position relative si no es necesario para el logo en móvil
-  }
-
-  .logo {
-    height: 250px; // Reducimos drásticamente la altura del logo (antes 500px)
-    width: 100%;
-  }
-
-  .primer-buscador {
-    width: 100%;
-    position: relative; // CAMBIO CLAVE: Quitamos absolute para que el menú fluya en el documento
-    top: 0;
-    margin-top: -20px; // Ajuste fino si el menú se superpone un poco
-    
-    ul {
-      position: static; // CAMBIO CLAVE: Quitamos absolute
-      display: flex;
-      flex-direction: column; // Menú vertical en móvil
-      width: 90%; // Ancho del menú
-      max-width: 350px;
-      margin: 10px auto; // Centrado
-      padding: 15px;
-      border-radius: 15px;
-      background-color: rgba(0, 0, 0, 0.7); // Fondo oscuro para que el texto resalte
-      backdrop-filter: blur(5px); // Efecto vidrio
-      gap: 10px; // Espacio entre items
-    }
-
-    li {
-      width: 100%;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-
-    a {
-      display: block; // Ocupa todo el ancho
-      text-align: center;
-      padding: 5px;
-      font-size: 1.1rem;
-      
-      &:hover {
-        color: #fff;
-        transform: scale(1.05); // Pequeño zoom al tocar
-      }
-    }
-  }
-
-  /* 2. Ajustes de las Tarjetas (Cartas) */
-  .cartas-general {
-    padding: 15px;
-    gap: 20px; // Espacio entre tarjetas
-
-    .carta-turismo, 
-    .carta-promociones, 
-    .carta-europa, 
-    .carta-nosotros {
-      width: 100%; // Ocupan todo el ancho
-      max-width: 350px; // No superan este ancho
-      margin: 0 auto; // Centrado
-      padding: 15px;
-      
-      img {
-        width: 100%; // Se adapta al ancho de la tarjeta
-        height: 200px;
-        object-fit: cover;
-      }
-
-      h4 {
-        font-size: 1.2rem;
-        margin: 10px 0;
-      }
-
-      button {
-        width: 100%; // Botón ancho completo
-        padding: 12px;
-        font-size: 1rem;
-      }
-    }
-  }
-
-  /* 3. Ajustes del Botón de Foto */
-  .boton-agregarfoto {
-    width: 90%; // Más ancho en móvil
-    margin: 20px auto;
-    
-    button {
-      width: 100%;
-      padding: 15px;
-      font-size: 1.1rem;
-    }
-    
-    img {
-      width: 100%; // La imagen subida se adapta
-      max-width: 300px;
-      height: auto; // Mantiene proporción
-    }
-  }
-}
-
-// --- MÓVILES MUY PEQUEÑOS (< 480px) ---
 @media (max-width: 480px) {
-  .logo {
-    height: 180px; // Logo aún más pequeño
+  // 1. Títulos: Un poco más pequeños pero con peso visual
+  .titulo {
+    font-size: 1.25rem; // Bajamos de 1.4 a 1.25 para que no ocupe tanto
+    font-weight: 700;
+    line-height: 1.2; // Ajusta la altura de línea para que no se corte
+    margin-bottom: 15px; // Un poco más de aire debajo del título
   }
 
-  .primer-buscador ul {
-    width: 95%;
-    padding: 10px;
-    border-radius: 10px;
+  // 2. Sección de invitación
+  .texto-invitación {
+    .titulo-invitación {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #333; // Asegúrate de que tenga buen contraste
+    }
+
+    .cuerpo-invitación {
+      font-size: 0.9rem; // Un poco más pequeño para lectura cómoda
+      line-height: 1.6; // Esto es CLAVE: aumenta el espacio entre líneas para que sea fácil de leer
+      margin-bottom: 20px;
+      opacity: 0.9; // Un toque de elegancia
+    }
   }
 
-  .cartas-general {
-    .carta-turismo, 
-    .carta-promociones, 
-    .carta-europa, 
-    .carta-nosotros {
-      img {
-        height: 160px; // Tarjetas más compactas
-      }
-      
-      h4 {
-        font-size: 1.1rem;
-      }
+  // 3. Imágenes: Mejor proporción
+  .contenedor-imagenes {
+    img {
+      height: auto; // ¡Importante! Deja que la imagen mantenga su proporción original
+      max-height: 250px; // Limitamos la altura máxima si es necesario, pero 'auto' es mejor
+      width: 100%;
+      border-radius: 12px; // Un radio un poco más suave se ve más moderno
+      object-fit: cover; // Evita que se deforme
+    }
+    
+    // Si tienes botones dentro, ajústalos también para que no queden pegados
+    .button {
+      width: 100%; // Botón ancho completo en móvil es más fácil de tocar
+      padding: 12px;
+      margin-top: 10px;
     }
   }
 }

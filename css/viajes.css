@@ -291,5 +291,36 @@
     height: 200px;
   }
 }
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  .contenedor-imagenes img {
+    height: auto;
+    max-height: 250px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  .contenedor-imagenes .button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+  }
+}
 
 /*# sourceMappingURL=viajes.css.map */

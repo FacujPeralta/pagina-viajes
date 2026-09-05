@@ -298,6 +298,37 @@
     height: 200px;
   }
 }
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .texto-invitación .cuerpo-invitación {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  .contenedor-imagenes img {
+    height: auto;
+    max-height: 250px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  .contenedor-imagenes .button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+  }
+}
 body {
   font-family: "lora", sans-serif;
 }
@@ -618,129 +649,35 @@ p {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  /* 1. Ajustes del Encabezado y Menú Flotante */
-  .encabezado {
-    padding: 10px;
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  .texto-invitación .titulo-invitación {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .texto-invitación .cuerpo-invitación {
     font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
   }
-  .contenedor-logo {
+  .contenedor-imagenes img {
+    height: auto;
+    max-height: 250px;
     width: 100%;
-  }
-  .logo {
-    height: 250px;
-    width: 100%;
-  }
-  .primer-buscador {
-    width: 100%;
-    position: relative;
-    top: 0;
-    margin-top: -20px;
-  }
-  .primer-buscador ul {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    max-width: 350px;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    gap: 10px;
-  }
-  .primer-buscador li {
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  .primer-buscador li:last-child {
-    border-bottom: none;
-  }
-  .primer-buscador a {
-    display: block;
-    text-align: center;
-    padding: 5px;
-    font-size: 1.1rem;
-  }
-  .primer-buscador a:hover {
-    color: #fff;
-    transform: scale(1.05);
-  }
-  /* 2. Ajustes de las Tarjetas (Cartas) */
-  .cartas-general {
-    padding: 15px;
-    gap: 20px;
-  }
-  .cartas-general .carta-turismo,
-  .cartas-general .carta-promociones,
-  .cartas-general .carta-europa,
-  .cartas-general .carta-nosotros {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    padding: 15px;
-  }
-  .cartas-general .carta-turismo img,
-  .cartas-general .carta-promociones img,
-  .cartas-general .carta-europa img,
-  .cartas-general .carta-nosotros img {
-    width: 100%;
-    height: 200px;
+    border-radius: 12px;
     object-fit: cover;
   }
-  .cartas-general .carta-turismo h4,
-  .cartas-general .carta-promociones h4,
-  .cartas-general .carta-europa h4,
-  .cartas-general .carta-nosotros h4 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-  .cartas-general .carta-turismo button,
-  .cartas-general .carta-promociones button,
-  .cartas-general .carta-europa button,
-  .cartas-general .carta-nosotros button {
+  .contenedor-imagenes .button {
     width: 100%;
     padding: 12px;
-    font-size: 1rem;
-  }
-  /* 3. Ajustes del Botón de Foto */
-  .boton-agregarfoto {
-    width: 90%;
-    margin: 20px auto;
-  }
-  .boton-agregarfoto button {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1rem;
-  }
-  .boton-agregarfoto img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-}
-@media (max-width: 480px) {
-  .logo {
-    height: 180px;
-  }
-  .primer-buscador ul {
-    width: 95%;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  .cartas-general .carta-turismo img,
-  .cartas-general .carta-promociones img,
-  .cartas-general .carta-europa img,
-  .cartas-general .carta-nosotros img {
-    height: 160px;
-  }
-  .cartas-general .carta-turismo h4,
-  .cartas-general .carta-promociones h4,
-  .cartas-general .carta-europa h4,
-  .cartas-general .carta-nosotros h4 {
-    font-size: 1.1rem;
+    margin-top: 10px;
   }
 }
 

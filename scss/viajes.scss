@@ -291,7 +291,21 @@
         height: 250px; // Altura fija pero más pequeña
         border-radius: 8px;
       }
+      .button{
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 1rem;
+        background-color: #174de0a4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
 
+        &:hover {
+          background-color: #0f3bbd; // Color más oscuro al pasar el mouse
+        }
+      }
       .texto-hover {
         font-size: 1.2rem; // Texto sobre imagen más pequeño
         padding: 8px 12px;

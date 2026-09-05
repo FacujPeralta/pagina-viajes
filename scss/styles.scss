@@ -5,7 +5,6 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 @import 'viajes.scss'; 
-// Sass buscará automáticamente _viajes.scss
 body {
     font-family: "lora", sans-serif;
 }
@@ -60,7 +59,7 @@ body {
         padding: 25px;
     }
     a{
-        color: #cccccca4;
+        color: #ccccccda;
         list-style: none;
         text-decoration: none;
         font-size:large;
@@ -293,8 +292,46 @@ body {
 }
 
 
-
-
+/* COMIENZO DE FOOTER*/
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  .paises,
+  .productos,
+  .sobre-nosotros {
+    flex: 1 1 0px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; // ← CLAVE: centra todo el contenido de la columna
+    
+    h2 {
+      color: rgb(39, 39, 119);
+      font-size: 20px;
+      margin: 15px;
+    }
+  }
+    h3 {
+      color: rgba(20, 27, 20, 0.767);
+      font-size: 15px;
+      display: flex;
+      justify-content: start;
+      cursor: pointer;
+      &:hover {
+        color: rgb(22, 7, 230);
+      }
+    }
+}
+p{
+    color: rgba(20, 27, 20, 0.767);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
 
 
 

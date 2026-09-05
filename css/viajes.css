@@ -258,6 +258,20 @@
     height: 250px;
     border-radius: 8px;
   }
+  .contendor-imagnes1 .contenedor-imagenes .button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: rgba(23, 77, 224, 0.6431372549);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .contendor-imagnes1 .contenedor-imagenes .button:hover {
+    background-color: #0f3bbd;
+  }
   .contendor-imagnes1 .contenedor-imagenes .texto-hover {
     font-size: 1.2rem;
     padding: 8px 12px;

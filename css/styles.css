@@ -265,6 +265,20 @@
     height: 250px;
     border-radius: 8px;
   }
+  .contendor-imagnes1 .contenedor-imagenes .button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: rgba(23, 77, 224, 0.6431372549);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .contendor-imagnes1 .contenedor-imagenes .button:hover {
+    background-color: #0f3bbd;
+  }
   .contendor-imagnes1 .contenedor-imagenes .texto-hover {
     font-size: 1.2rem;
     padding: 8px 12px;
@@ -337,7 +351,7 @@ body {
   padding: 25px;
 }
 .primer-buscador a {
-  color: rgba(204, 204, 204, 0.6431372549);
+  color: rgba(204, 204, 204, 0.8549019608);
   list-style: none;
   text-decoration: none;
   font-size: large;
@@ -557,6 +571,49 @@ body {
   width: 300px;
   height: 200px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* COMIENZO DE FOOTER*/
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+.footer .paises,
+.footer .productos,
+.footer .sobre-nosotros {
+  flex: 1 1 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .paises h2,
+.footer .productos h2,
+.footer .sobre-nosotros h2 {
+  color: rgb(39, 39, 119);
+  font-size: 20px;
+  margin: 15px;
+}
+.footer h3 {
+  color: rgba(20, 27, 20, 0.767);
+  font-size: 15px;
+  display: flex;
+  justify-content: start;
+  cursor: pointer;
+}
+.footer h3:hover {
+  color: rgb(22, 7, 230);
+}
+
+p {
+  color: rgba(20, 27, 20, 0.767);
+  font-size: 15px;
   display: flex;
   justify-content: center;
 }

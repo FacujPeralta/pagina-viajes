@@ -482,6 +482,55 @@ body {
   cursor: pointer;
 }
 
+/* STYLOS DE CITIOS*/
+.citios {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px;
+  background-color: rgba(133, 126, 126, 0.116);
+}
+.citios .carta-citios {
+  box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.citios .carta-citios img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.citios .carta-citios h4 {
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+  font-size: 14px;
+  font-weight: 300;
+}
+.citios .carta-citios .precio {
+  margin-left: 15px;
+  color: rgba(236, 0, 0, 0.8980392157);
+}
+.citios .carta-citios button {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(110, 109, 109, 0.24);
+  justify-content: end;
+  cursor: pointer;
+}
+.citios .carta-citios button:hover {
+  background-color: rgba(57, 18, 233, 0.637);
+  color: white;
+}
+.citios .carta-citios:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(57, 18, 233, 0.637);
+  cursor: pointer;
+}
+
 .boton-agregarfoto {
   width: 30%;
   height: auto;

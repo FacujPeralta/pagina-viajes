@@ -208,6 +208,59 @@ body {
     }
 }
 
+/* STYLOS DE CITIOS*/
+.citios{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 25px;
+    background-color: rgba(133, 126, 126, 0.116);
+    .carta-citios{
+        box-shadow: 5px 5px 10px black;
+        border-radius: 10px;
+        justify-content: center;
+        text-align: center;
+        transition: transform 0.3s ease;
+        img{
+            width:100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        h4{
+            padding: 10px;
+            display: flex;
+            justify-content: start;
+            font-size: 14px;
+            font-weight: 300;
+        }  
+        .precio{
+          margin-left: 15px;
+          color:#ec0000e5
+        }
+
+        button{
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px 15px;
+            background-color: rgba(110, 109, 109, 0.24);
+            justify-content: end;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(57, 18, 233, 0.637);
+                color: white;
+            }
+        }
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 5px 5px 10px rgba(57, 18, 233, 0.637);
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
 .boton-agregarfoto {
     width: 30%;
     height: auto;
@@ -238,6 +291,11 @@ body {
     }
 
 }
+
+
+
+
+
 
 
 // --- RESPONSIVE DESIGN (MÓVILES Y TABLETS) ---
